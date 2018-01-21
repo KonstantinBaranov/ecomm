@@ -8,9 +8,11 @@ require 'webroot' . DIRECTORY_SEPARATOR . 'index.php';
 
 // 2. Подключение файлов системы
 
-define('ROOT', dirname(__FILE__));
+define('ROOT', dirname(__FILE__));//Полный путь к файлу на диске
 require_once (ROOT.'components/Router.php');
 
 // 3. Установка соединения с базой
 
 // 4. Вызов Router
+$router = new Router();
+$router->run();
